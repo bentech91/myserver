@@ -5,7 +5,9 @@ const port = 3000;
 
 app.get("/", (req, res) => {
   try {
-    res.send("Hello World");
+    res.status(200).send({
+      message: "Hello World",
+    });
   } catch (error) {
     console.error(error);
   }
